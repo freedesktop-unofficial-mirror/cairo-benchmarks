@@ -1,0 +1,18 @@
+2005-08-19  Billy Biggs  <vektor@dumbterm.net>
+
+	* 256x256-alphagreen.png:
+	* 256x256-darkgnome.png:
+	* 48x48-brokenlock.png:
+	* 48x48-mail.png:
+	* 48x48-script.png:
+	* 48x48-todo.png:
+	* 512x512-lenna.png:
+	* 512x512-primrose.png:
+	* 512x512-redsquare.png:
+	* 512x512-transparent.png:
+	* 640x480-empty.png:
+	* 640x480-opaque.png:
+	* 640x480-shapes.png:
+	* 640x480-text.png:
+	* 640x480-transparentshapes.png: Add test images.
+
