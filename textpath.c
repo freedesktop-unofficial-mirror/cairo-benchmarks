@@ -7,10 +7,10 @@
 #include <unistd.h>
 #include <cairo.h>
 #include "tools.h"
-#include "setup.h"
 
-static int width = 512;
-static int height = 512;
+#define NUM_RUNS 64
+#define WIDTH 512
+#define HEIGHT 512
 
 #define rdtscll(val) __asm__ __volatile__("rdtsc" : "=A" (val))
 
@@ -38,7 +38,7 @@ static int test (cairo_surface_t *surface)
 
     cairo_set_source_rgba (cr, 1.0, 1.0, 1.0, 1.0);
     cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
-    cairo_rectangle (cr, 0, 0, width, height);
+    cairo_rectangle (cr, 0, 0, WIDTH, HEIGHT);
     cairo_fill (cr);
 
     cairo_set_line_width (cr, 0.8);
@@ -70,7 +70,7 @@ int main( int argc, char **argv )
     cairo_surface_t *surface;
     int j;
 
-    surface = output_create_surface (argv [0], width, height);
+    surface = output_create_surface (argv [0], WIDTH, HEIGHT);
 
     fprintf (stderr, "Testing textpath...\n");
     test (surface);

@@ -20,6 +20,8 @@ BENCHMARKS=				\
 	curves-xlib			\
 	gradients-linear		\
 	gradients-linear-xlib		\
+	multiple-clip-rectangles	\
+	multiple-clip-rectangles-xlib	\
 	textpath			\
 	textpath-xlib			\
 	texturedtext			\

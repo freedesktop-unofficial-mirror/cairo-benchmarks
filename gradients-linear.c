@@ -7,10 +7,10 @@
 #include <unistd.h>
 #include <cairo.h>
 #include "tools.h"
-#include "setup.h"
 
-static int width = 512;
-static int height = 512;
+#define NUM_RUNS 64
+#define WIDTH 512
+#define HEIGHT 512
 
 #define rdtscll(val) __asm__ __volatile__("rdtsc" : "=A" (val))
 
@@ -25,10 +25,10 @@ static int test (cairo_surface_t *surface)
 
     cairo_set_source_rgba (cr, 1.0, 1.0, 1.0, 1.0);
     cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
-    cairo_rectangle (cr, 0, 0, width, height);
+    cairo_rectangle (cr, 0, 0, WIDTH, HEIGHT);
     cairo_fill (cr);
 
-    pattern = cairo_pattern_create_linear (0.0, 0.0,  width, height);
+    pattern = cairo_pattern_create_linear (0.0, 0.0, WIDTH, HEIGHT);
     cairo_pattern_add_color_stop_rgba (pattern, 1, 0, 0, 0, 1);
     cairo_pattern_add_color_stop_rgba (pattern, 0, 1, 1, 1, 1);
     cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
@@ -37,7 +37,7 @@ static int test (cairo_surface_t *surface)
 
     rdtscll (before);
     cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
-    cairo_rectangle (cr, 0, 0, width, height);
+    cairo_rectangle (cr, 0, 0, WIDTH, HEIGHT);
     cairo_fill (cr);
     rdtscll (after);
 
@@ -52,7 +52,7 @@ int main( int argc, char **argv )
     cairo_surface_t *surface;
     int j;
 
-    surface = output_create_surface (argv [0], width, height);
+    surface = output_create_surface (argv [0], WIDTH, HEIGHT);
 
     fprintf (stderr, "Testing gradients-linear...\n");
     test (surface);

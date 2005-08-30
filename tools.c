@@ -9,7 +9,12 @@
 #include <cairo.h>
 #include <cairo-xlib-xrender.h>
 #include "tools.h"
-#include "setup.h"
+
+/**
+ * Set this to 1 to use realtime priority.  Dangerous!  This will hang your
+ * machine for the duration of the test!  Infinite loop and you must reboot!
+ */
+#define USE_REALTIME_PRIORITY 0
 
 #define rdtscll(val) __asm__ __volatile__("rdtsc" : "=A" (val))
 

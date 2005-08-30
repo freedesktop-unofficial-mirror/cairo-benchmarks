@@ -1,3 +1,32 @@
+2005-08-29  Billy Biggs  <vektor@dumbterm.net>
+
+	* Makefile: Add the multiple-clip-rectangles test.
+	* multiple-clip-rectangles.c: (test), (main): Make this
+	a real test case.
+
+	* setup.h: Ditch this, it just makes the tests less
+	self-contained.
+
+	* tools.c: Put the USE_REALTIME_PRIORITY toggle here.
+
+	* add.c: (test), (main):
+	* curves.c: (test), (main):
+	* downsample-bilinear.c: (test), (main):
+	* downsample-nearest.c: (test), (main):
+	* gradients-linear.c: (test), (main):
+	* lines.c: (test), (main):
+	* over-clipped.c: (test), (main):
+	* over.c: (test), (main):
+	* textpath.c: (test), (main):
+	* texturedtext.c: (test), (main):
+	* upsample-bilinear.c: (test), (main):
+	* upsample-nearest.c: (test), (main):  Make all of the tests
+	more independent by dropping setup.h.
+
+2005-08-29  Billy Biggs  <vektor@dumbterm.net>
+
+	* memcpy-helper.c: Make it more useful.
+
 2005-08-19  Billy Biggs  <vektor@dumbterm.net>
 
 	* 256x256-alphagreen.png:
