@@ -17,8 +17,8 @@ void *memcpy (void *dest, const void *src, size_t n)
     memcpy_size += n;
 
     if (memcpy_size - last_checkpoint > (1024*1024)) {
-asm("int3");
         fprintf (stderr, "memcpy total: %d\n", memcpy_size);
+        //asm("int3");
         last_checkpoint = memcpy_size;
     }
     return real_memcpy (dest, src, n);
