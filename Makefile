@@ -25,7 +25,8 @@ BENCHMARKS=				\
 	textpath			\
 	textpath-xlib			\
 	texturedtext			\
-	texturedtext-xlib
+	texturedtext-xlib		\
+	remenic-gradient
 
 MYCFLAGS=-Wall `pkg-config --cflags cairo libpng12`
 MYLDFLAGS=`pkg-config --libs cairo libpng12`

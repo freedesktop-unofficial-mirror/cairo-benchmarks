@@ -1,5 +1,13 @@
 2005-08-29  Billy Biggs  <vektor@dumbterm.net>
 
+	* remenic-gradient.c: (rounded_rectangle), (run_benchmark), (main):
+	Add the test case from bug #4263.
+	* Makefile: Add it to the makefile as well.
+
+	* .cvsignore: Add a .cvsignore.
+
+2005-08-29  Billy Biggs  <vektor@dumbterm.net>
+
 	* Makefile: Add the multiple-clip-rectangles test.
 	* multiple-clip-rectangles.c: (test), (main): Make this
 	a real test case.
