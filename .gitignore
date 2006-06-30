@@ -1,3 +1,4 @@
+*-out.png
 add
 add-xlib
 curves
@@ -18,6 +19,8 @@ over-clipped-xlib
 over-xlib
 pdf2png.c
 remenic-gradient
+solidtext
+solidtext-xlib
 textpath
 textpath-xlib
 texturedtext

@@ -22,6 +22,8 @@ BENCHMARKS=				\
 	gradients-linear-xlib		\
 	multiple-clip-rectangles	\
 	multiple-clip-rectangles-xlib	\
+	solidtext			\
+	solidtext-xlib			\
 	textpath			\
 	textpath-xlib			\
 	texturedtext			\
