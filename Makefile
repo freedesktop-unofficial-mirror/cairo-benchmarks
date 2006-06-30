@@ -28,8 +28,8 @@ BENCHMARKS=				\
 	texturedtext-xlib		\
 	remenic-gradient
 
-MYCFLAGS=-Wall `pkg-config --cflags cairo libpng12`
-MYLDFLAGS=`pkg-config --libs cairo libpng12`
+MYCFLAGS=-Wall `pkg-config --cflags cairo libpng12` -I/usr/X11R6/include
+MYLDFLAGS=`pkg-config --libs cairo libpng12` -L/usr/X11R6/lib
 
 MYOBJS=tools.o
 
