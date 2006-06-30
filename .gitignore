@@ -27,3 +27,5 @@ upsample-bilinear-xlib
 upsample-nearest
 upsample-nearest-xlib
 remenic-gradient
+tools.o
+
